@@ -1,0 +1,8 @@
+bind: 0.0.0.0:28083
+topic: es-demo
+bulk_message_count: 100
+bulk_message_flush_interval_ms: 1000
+kafka_brokers:
+    - 172.17.0.3:9092
+    - 172.17.0.4:9092
+    - 172.17.0.5:9092
