@@ -1,0 +1,1 @@
+/apps/svr/logstash/bin/logstash --path.settings /apps/svr/logstash/config
