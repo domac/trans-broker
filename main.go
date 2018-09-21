@@ -20,10 +20,6 @@ var (
 	debug       = flagSet.Bool("debug", false, "open debug mode")
 )
 
-func init() {
-	logger.InitLogger("/tmp/tb.log")
-}
-
 func main() {
 
 	flagSet.Parse(os.Args[1:])
@@ -37,9 +33,10 @@ func main() {
 
 	appConfig, err := app.ParseConfigFile(*configFile)
 	if err != nil {
-		logger.Log().Error(err)
 		panic(err)
 	}
+
+	logger.InitLogger(appConfig.LogPath)
 
 	//启动API服务
 	go app.RunHTTPServer(appConfig)

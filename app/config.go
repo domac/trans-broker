@@ -11,6 +11,7 @@ type AppConfig struct {
 	BulkMessagesCount        int      `yaml:"bulk_message_count"`
 	KafkaBrokers             []string `yaml:"kafka_brokers"`
 	BulkMessageFlushInterval int      `yaml:"bulk_message_flush_interval_ms"`
+	LogPath                  string   `yaml:"log_path"`
 }
 
 //解析配置文件

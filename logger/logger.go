@@ -1,6 +1,7 @@
 package logger
 
 import (
+	"fmt"
 	"go.uber.org/zap"
 )
 
@@ -25,6 +26,9 @@ func InitLogger(logFile string) (*MyLogger, error) {
 	if logFile != "" {
 		cfg.OutputPaths = []string{logFile}
 	}
+
+	fmt.Printf("log path : %s\n", cfg.OutputPaths)
+
 	l.zaplog, err = cfg.Build()
 
 	if err != nil {
