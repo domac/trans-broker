@@ -29,7 +29,7 @@
                 "@date_operation": {
                     "type": "date"
                 },
-                "event_time": {
+                "@date_event": {
                     "type": "date"
                 },
                 "dst_port": {
